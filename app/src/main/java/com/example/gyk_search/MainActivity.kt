@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             val appimage = it.applicationInfo.loadIcon(packageManager)
             val vercode = it.versionCode
             val verName = it.versionName
+            val packagename=it.packageName //获取包名，可以跳转应用
             var appinfo =AppInfo(appimage, appname as String,vercode)
             applist.add(appinfo)
         }
