@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class AppAdapter(val Applist: List<AppInfo>) : RecyclerView.Adapter<AppAdapter.ViewHolder>() {
@@ -21,18 +20,7 @@ class AppAdapter(val Applist: List<AppInfo>) : RecyclerView.Adapter<AppAdapter.V
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.appinfo_item,parent,false)
-        val viewHolder = ViewHolder(view)
-        viewHolder.itemView.setOnClickListener {
-            val position = viewHolder.adapterPosition
-            val appInfo = Applist[position]
-            Toast.makeText(parent.context, "you clicked view ${appInfo.mappname}", Toast.LENGTH_SHORT).show()
-        }
-        viewHolder.appimage.setOnClickListener {
-            val position = viewHolder.adapterPosition
-            val fruit = Applist[position]
-            Toast.makeText(parent.context, "you clicked image ${fruit.mappname}", Toast.LENGTH_SHORT).show()
-        }
-        return viewHolder
+        return ViewHolder(view)
     }
 
 
