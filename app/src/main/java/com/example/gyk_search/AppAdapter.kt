@@ -32,7 +32,7 @@ class AppAdapter(val Applist: List<AppInfo>) : RecyclerView.Adapter<AppAdapter.V
             val fruit = Applist[position]
             Toast.makeText(parent.context, "you clicked image ${fruit.mappname}", Toast.LENGTH_SHORT).show()
         }
-        return viewHolder //要改，不然点击获取的是-1
+        return viewHolder
     }
 
 
