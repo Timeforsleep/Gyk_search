@@ -3,13 +3,40 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/dial_delete_selector.xml" value="0.14635416666666667" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/dialj_ic_selector.xml" value="0.125" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/keyboard_show_selector.xml" value="0.12760416666666666" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/num0_ic_selector.xml" value="0.125" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/num1_ic_selector.xml" value="0.12760416666666666" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/num3_ic_selector.xml" value="0.12760416666666666" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/num5_ic_selector.xml" value="0.125" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/drawable/telephone_dial_close_selector.xml" value="0.12760416666666666" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/layout/appinfo_item.xml" value="0.1296875" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/layout/fragment_dial.xml" value="0.10885416666666667" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/layout/fragment_dial_.xml" value="0.264" />
+        <entry key="..\:/Android/Gyk_search_laptop/app/src/main/res/layout/t9_telephone_dialpad_layout.xml" value="0.536" />
         <entry key="..\:/Users/A110112/AndroidStudioProjects/Gyk_search/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/A110112/AndroidStudioProjects/Gyk_search/app/src/main/res/layout/appinfo_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/A110112/AndroidStudioProjects/Gyk_search/app/src/main/res/layout/fragment_dialpad.xml" value="0.36614583333333334" />
+        <entry key="app/src/main/res/drawable/dial_delete_selector.xml" value="0.403125" />
+        <entry key="app/src/main/res/drawable/dialj_ic_selector.xml" value="0.3640625" />
+        <entry key="app/src/main/res/drawable/dialx_ic_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/keyboard_hide_selector.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/keyboard_show_selector.xml" value="0.403125" />
+        <entry key="app/src/main/res/drawable/num0_ic_selector.xml" value="0.3640625" />
+        <entry key="app/src/main/res/drawable/num1_ic_selector.xml" value="0.403125" />
+        <entry key="app/src/main/res/drawable/num8_ic_selector.xml" value="0.3640625" />
+        <entry key="app/src/main/res/drawable/num9_ic_selector.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/switch_button_selector.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/telephone_dial_close_selector.xml" value="0.1365" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22756347656249998" />
+        <entry key="app/src/main/res/layout/appinfo_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/contactinfo_item.xml" value="0.46953125000000007" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
