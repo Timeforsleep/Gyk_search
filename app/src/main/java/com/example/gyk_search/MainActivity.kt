@@ -2,7 +2,7 @@ package com.example.gyk_search
 
 
 import android.Manifest.permission.READ_CONTACTS
-import android.app.Activity
+import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.database.Cursor
@@ -11,8 +11,8 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
 import android.view.KeyEvent
-import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -24,7 +24,7 @@ import com.t9search.util.T9Util
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
 
     private val appList = ArrayList<AppInfo>()
 
@@ -109,6 +109,28 @@ class MainActivity : Activity() {
         }
 
 
+        qrcodebtn.setOnClickListener {
+            try {
+                val uri: Uri = Uri.parse("alipayqr://platformapi/startapp?saId=10000007")
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(MyApplication.context,"无法跳转支付宝，请检查是否安装了", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        paycodebtn.setOnClickListener {
+            try {
+                val uri: Uri = Uri.parse("alipayqr://platformapi/startapp?saId=20000056")
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(MyApplication.context,"无法跳转支付宝，请检查是否安装了", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
         fab.isSelected = true
         fab.setOnClickListener {
             fab.isSelected = !fab.isSelected
@@ -118,6 +140,11 @@ class MainActivity : Activity() {
             dialNum0, dialNum1, dialNum2, dialNum3, dialNum4,
             dialNum5, dialNum6, dialNum7, dialNum8, dialNum9
         )
+
+        searchbtn.setOnClickListener {
+            val intent = Intent(this,SearchActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setNumClickListener(vararg views: TextView) {
@@ -144,7 +171,7 @@ class MainActivity : Activity() {
     }
 
     fun getContacts(contactList:ArrayList<ContactInfo>) {
-        val resolver=getContentResolver();
+        val resolver=contentResolver
         val uri:Uri= ContactsContract.CommonDataKinds.Phone.CONTENT_URI
         val cursor: Cursor? = resolver.query(uri,
             arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME), null, null, null)
@@ -164,6 +191,7 @@ class MainActivity : Activity() {
             contactList.add(contactInfo)
         }
         contactListAdapter.updateList(contactList)
+        cursor.close()
     }
 
 }

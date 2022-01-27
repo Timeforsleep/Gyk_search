@@ -30,7 +30,8 @@
         <entry key="app/src/main/res/drawable/num9_ic_selector.xml" value="0.1365" />
         <entry key="app/src/main/res/drawable/switch_button_selector.xml" value="0.1365" />
         <entry key="app/src/main/res/drawable/telephone_dial_close_selector.xml" value="0.1365" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22756347656249998" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.3089187622070313" />
         <entry key="app/src/main/res/layout/appinfo_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/contactinfo_item.xml" value="0.46953125000000007" />
       </map>

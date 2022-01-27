@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
-    android:layout_height="680dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:orientation="vertical"
     android:background="@color/white"
     android:fitsSystemWindows="true"
-    tools:ignore="ContentDescription">
+    tools:ignore="ContentDescription,ExtraText">
+
 
 
 
@@ -17,7 +19,6 @@
         android:layout_height="0dp"
         android:clipToPadding="false"
         android:paddingBottom="8dp"
-
         app:layout_constraintBottom_toTopOf="@id/frag"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -56,11 +57,11 @@
 
             <EditText
                 android:id="@+id/dial_input_edit_text"
-                android:layout_width="314dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="按照九宫格打字输入号码"
+                android:hint="@string/edithint"
                 android:importantForAutofill="no"
                 android:inputType="phone"
                 android:singleLine="true"
@@ -196,46 +197,78 @@
                 android:layout_weight="1"
                 android:background="@drawable/dialj_ic_selector"
                 android:tag="#" />
+
         </LinearLayout>
 
     </LinearLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/fab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:background="@color/white"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <View
+        <!--<View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:alpha="0.15"
-            android:background="@color/black" />
+            android:background="@color/black" />-->
 
-        <ImageView
-            android:id="@+id/fab"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:background="@null"
-            android:elevation="8dp"
-            android:padding="8dp"
-            android:src="@drawable/keyboard_show_selector" />
 
         <Button
             android:id="@+id/switchbutton"
             android:layout_width="65dp"
-            android:layout_height="59dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:layout_constraintBottom_toBottomOf="@+id/dialx"
-            android:background="@drawable/switch_button_selector"
-            android:padding="8dp"
+            android:background="@drawable/switch_button_selector" />
 
+        <TextView
+            android:id="@+id/searchbtn"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/searchbtn"
             />
-    </FrameLayout>
+
+        <ImageView
+            android:id="@+id/fab"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:elevation="8dp"
+            android:padding="8dp"
+            android:src="@drawable/keyboard_show_selector"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/qrcodebtn"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/qrcode"/>
+
+        <TextView
+            android:id="@+id/paycodebtn"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/paycode"/>
+
+
+
+
+    </LinearLayout>>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,6 @@ import com.t9search.util.PinyinUtil
 
 // 使用 data class
 data class AppInfo(val appImage: Drawable, val appName: String, val pkgName: String) {
-
     val t9SearchUnit by lazy {
         PinyinSearchUnit(appName).also { PinyinUtil.parse(it) }
         // 等价于这样写
